@@ -89,9 +89,13 @@
   </nav>
 
 </header>
-<!--End Header & Navbar -->
 
-<!-- Banner -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">{{ page.breadcrumb }}</div>
+  </div>
+</div>
+
 {% if is_front and page.welcome_banner_text %}
   <div class="welcome-banner">
     <div class="container welcome-banner-text">
@@ -152,40 +156,26 @@
     </div>
   {% endif %}
 {% endif %}
-<!--End Top Widget -->
 
-
-<!-- Page Title -->
 {%  if page.page_title and not is_front %}
   <div id="page-title">
     <div id="page-title-inner">
-      <!-- start: Container -->
       <div class="container">
         {{ page.page_title }}
       </div>
     </div>
   </div>
 {% endif %}
-<!-- End Page Title ---- >
 
-
-<!-- layout -->
 <div id="wrapper">
-  <!-- start: Container -->
+
   <div class="container">
-    
-    <!--Content top-->
+
       {% if page.content_top %}
         <div class="row">
           {{ page.content_top }}
         </div>
       {% endif %}
-    <!--End Content top-->
-    
-    <!--start:content -->
-    <div class="row">
-      <div class="col-md-12">{{ page.breadcrumb }}</div>
-    </div>
 
     <div class="row layout">
       <!--- Start Left SideBar -->
