@@ -17,7 +17,7 @@ h2,
 
 h3,
 .h3 { 
-  font-size: 16px;
+  font-size: 20px;
   color: #000;
 }
 
@@ -52,20 +52,26 @@ ul.links.inline li {
   margin-bottom: 20px;
 }
 
+body {
+  padding-top: 70px;
+}
+
 .main-header {
   padding: 10px 0;
   box-shadow: 0px 0 5px 0px #2e2e2e;
 }
 
-.main-header nav {
-  background: none;
-  border: 0;
-  margin: 0;
-  position: relative;
-  z-index: 2;
+.main-header.navbar-fixed-top {
+  z-index: 9;
 }
 
-/*region header*/
+body.toolbar-tray-open.toolbar-horizontal .main-header {
+  top: 77px;
+}
+
+body.toolbar-fixed.toolbar-vertical .main-header {
+  top: 39px;
+}
 
 .site-branding {
   margin: 0;
@@ -545,10 +551,10 @@ nav h2 {
 }
 
 .comment-submitted {
-  padding: 5px 10px;
-  border: 1px solid #eee;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
   font-size: 12px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   display: block;
 }
 

@@ -1,0 +1,12 @@
+{% 
+  set classes = [
+    'node__duration'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  {% for item in items %}
+    <span{{ item.attributes }}>{{ item.content }}{% if not loop.last %},{% endif %}</span>
+  {% endfor %}
+</div>

@@ -1,0 +1,23 @@
+/* Helper classes. */
+.inline {
+  display: inline;
+}
+
+.fa {
+  color: #13ADB3;
+}
+
+.bold {
+  font-weight: 700;
+}
+/* End Helper classes. */
+
+.node__body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.node__duration {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
