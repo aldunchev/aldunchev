@@ -4,13 +4,15 @@
  */
 
 .messages {
-  background: no-repeat 10px 17px;  /* LTR */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 20px 15px 20px; /* LTR */
   border: 1px solid;
   border-width: 1px 1px 1px 0;  /* LTR */
   border-radius: 2px;
-  padding: 15px 20px 15px 20px; /* LTR */
   word-wrap: break-word;
   overflow-wrap: break-word;
+  background: no-repeat 10px 17px;  /* LTR */
 }
 [dir="rtl"] .messages {
   border-width: 1px 0 1px 1px;

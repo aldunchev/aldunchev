@@ -58,8 +58,6 @@
  */
 #}
 
-
-<!-- Header and Navbar -->
 <header class="main-header navbar navbar-default navbar-fixed-top">
   <nav role="navigation">
     <div class="container">
@@ -76,39 +74,32 @@
         {% endif %}
       </div>
 
-      <!-- Navigation -->
       <div class="col-md-9">
         {% if page.primary_menu %}
           {{ page.primary_menu }}
         {% endif %}      
       </div>
-      <!--End Navigation -->
 
       </div>
     </div>
   </nav>
 </header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">{{ page.breadcrumb }}</div>
+{% if not is_front %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">{{ page.breadcrumb }}</div>
+    </div>
   </div>
-</div>
+{% endif %}
 
 {% if is_front and page.welcome_banner_text %}
   <div class="welcome-banner">
     <div class="container welcome-banner-text">
-      <div class="row">
-        <div class="col-md-12">
-            {{ page.welcome_banner_text }}
-        </div>
-      </div>
+      {{ page.welcome_banner_text }}
     </div>
   </div>
 {% endif %}
-<!-- End Banner -->
 
-<!--Highlighted-->
   {% if page.highlighted %}
     <div class="container">
       <div class="row">
@@ -118,45 +109,35 @@
       </div>
     </div>
   {% endif %}
-<!--End Highlighted-->
 
-
-<!-- Start Top Widget -->
 {% if is_front %}  
   {% if page.topwidget_first or page.topwidget_second or page.topwidget_third %}
     <div class="topwidget">
-      <!-- start: Container -->
       <div class="container">
         
         <div class="row">
-          <!-- Top widget first region -->
           <div class = {{ topwidget_class }}>
             {% if page.topwidget_first %}
               {{ page.topwidget_first }}
             {% endif %}
           </div>
-          <!-- End top widget third region -->
-          <!-- Top widget second region -->
           <div class = {{ topwidget_class }}>
             {% if page.topwidget_second %}
               {{ page.topwidget_second }}
             {% endif %}
           </div>
-          <!-- End top widget third region -->
-          <!-- Top widget third region -->
           <div class = {{ topwidget_third_class }}>
             {% if page.topwidget_third %}
               {{ page.topwidget_third }}
             {% endif %}
           </div>
-          <!-- End top widget third region -->
         </div>
       </div>
     </div>
   {% endif %}
 {% endif %}
 
-{%  if page.page_title and not is_front %}
+{%  if page.page_title %}
   <div id="page-title">
     <div id="page-title-inner">
       <div class="container">
@@ -177,7 +158,6 @@
       {% endif %}
 
     <div class="row layout">
-      <!--- Start Left SideBar -->
       {% if page.sidebar_first %}
         <div class="sidebar" >
           <div class = {{sidebarfirst}} >
@@ -185,19 +165,15 @@
           </div>
         </div>
       {% endif %}
-      <!---End Right SideBar -->
 
-      <!--- Start content -->
       {% if page.content %}
         <div class="content_layout">
-          <div class={{contentlayout}}>
+          <div class="{{contentlayout}}">
             {{ page.content }}
           </div>
         </div>
       {% endif %}
-      <!---End content -->
 
-      <!--- Start Right SideBar -->
       {% if page.sidebar_second %}
         <div class="sidebar">
           <div class={{sidebarsecond}}>
@@ -205,59 +181,38 @@
           </div>
         </div>
       {% endif %}
-      <!---End Right SideBar -->
-      
     </div>
-    <!--End Content -->
-
-    <!--Start Content Bottom-->
     {% if page.content_bottom %}
       <div class="row">
         {{ page.content_bottom }}
       </div>
     {% endif %}
-    <!--End Content Bottom-->
   </div>
 </div>
-<!-- End layout -->
 
-
-
-
-
-
-<!-- Start bottom -->
 {% if is_front %}  
   {% if page.bottom_first or page.bottom_second or page.bottom_third %}
     <div class="bottom-widgets">
-      <!-- Start Container -->
       <div class="container">
         
         <div class="row">
-
-          <!-- Start Bottom First Region -->
           <div class = {{ bottom_class }}>
             {% if page.bottom_first %}
               {{ page.bottom_first }}
             {% endif %}
           </div>
-          <!-- End Bottom First Region -->
 
-          <!-- Start Bottom Second Region -->
           <div class = {{ bottom_class }}>
             {% if page.bottom_second %}
               {{ page.bottom_second }}
             {% endif %}
           </div>
-          <!-- End Bottom Second Region -->
 
-          <!-- Start Bottom third Region -->
           <div class = {{ bottom_class }}>
             {% if page.bottom_third %}
               {{ page.bottom_third }}
             {% endif %}
           </div>
-          <!-- End Bottom Third Region -->
 
           <div class = {{ bottom_class }}>
             {% if page.bottom_forth %}
@@ -270,48 +225,36 @@
     </div>
   {% endif %}
 {% endif %}
-<!--End Bottom -->
 
-
-
-
-<!-- start: Footer -->
 {% if  is_front and (page.footer_first or page.footer_second or page.footer_third) %}
   <div class="footerwidget">
     <div class="container">
-      
+
       <div class="row">
-        
-        <!-- Start Footer First Region -->
+
         <div class = {{ footer_class }}>
           {% if page.footer_first %}
             {{ page.footer_first }}
           {% endif %}
         </div>
-        <!-- End Footer First Region -->
 
-        <!-- Start Footer Second Region -->
         <div class = {{ footer_class }}>
           {% if page.footer_second %}
             {{ page.footer_second }}
           {% endif %}
         </div>
-        <!-- End Footer Second Region -->
 
-        <!-- Start Footer third Region -->
         <div class = {{ footer_third_class }}>
           {% if page.footer_third %}
             {{ page.footer_third }}
           {% endif %}
         </div>
-        <!-- End Footer Third Region -->
+
       </div>
     </div>
   </div>
 {% endif %}
-<!--End Footer -->
 
-<!-- Start Footer Menu -->
 {% if page.footer_menu %}
   <div class="footer-menu">
     <div class="container">
@@ -347,39 +290,31 @@
     </div>
   </div>
 {% endif %}
-<!-- End Footer Menu -->
 
 {% if copyright_text or show_credit_link %}
 <div class="copyright">
   <div class="container">
     <div class="row">
 
-      <!-- Copyright -->
       <div class="col-sm-6 col-md-6">
-        {% if copyright_text %}        
-          <p>{{copyright_text}}</p>        
+        {% if copyright_text %}
+          <p>{{copyright_text}}</p>
         {% endif %}
       </div>
-      <!-- End Copyright -->
 
-      <!-- Credit link -->
       {% if show_credit_link %}
         <div class="col-sm-6 col-md-6">
-          <p class="credit-link">Designed by <a href="http://www.zymphonies.in" target="_blank">Zymphonies</a></p>
+          <p class="credit-link">{{ 'Designed by'|t }} <a href="http://www.zymphonies.in" target="_blank">Zymphonies</a></p>
         </div>
       {% endif %}
-      <!-- End Credit link -->
-      
+
     </div>
   </div>
 </div>
 {% endif %}
 
-
-<!-- Google map -->
 {% if is_front and page.google_map %}
   <div class="google_map">
     {{ page.google_map }}
   </div>
 {% endif %}
-<!-- End Google map -->

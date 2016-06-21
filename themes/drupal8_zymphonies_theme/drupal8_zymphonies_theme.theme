@@ -72,7 +72,7 @@ function drupal8_zymphonies_theme_preprocess_page(&$variables) {
     $variables['sidebarfirst'] = 'col-md-3';
   }
   elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['contentlayout'] = 'col-md-9';
+    $variables['contentlayout'] = "col-md-9 content-bg-primary";
     $variables['sidebarsecond'] = 'col-md-3';
   }
   else {
@@ -209,3 +209,8 @@ function drupal8_zymphonies_theme_preprocess_field(&$variables){
     $variables['attributes']['class'][] = 'node__body';
   }
 }
+
+function drupal8_zymphonies_theme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  unset($form['help_link']);
+}
+
