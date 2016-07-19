@@ -608,3 +608,17 @@ ul.links.inline li {
   text-align: left;
   margin-bottom: 5px;
 }
+
+.block-language {
+  margin-bottom: 0;
+}
+
+.block-language a.is-active {
+  color: #13adb3;
+}
+
+.dropdown-language-btn {
+  border: 0 none;
+  padding: 13px 24px;
+  background-color: transparent;
+}

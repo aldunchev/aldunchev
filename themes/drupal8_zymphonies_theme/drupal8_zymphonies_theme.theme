@@ -214,3 +214,15 @@ function drupal8_zymphonies_theme_form_alter(&$form, \Drupal\Core\Form\FormState
   unset($form['help_link']);
 }
 
+/**
+ * Implements hook_preprocess_block().
+ */
+function drupal8_zymphonies_theme_preprocess_block(&$variables){
+  switch ($variables['plugin_id']) {
+    case 'system_menu_block:main':
+    case 'language_block:language_interface':
+      $variables['attributes']['class'][] = 'fl-left';
+      break;
+  }
+  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+}

@@ -14,10 +14,11 @@
  */
 #}
 {% set attributes = attributes.addClass('site-branding') %}
+{% set home = path('<front>') ~ language %}
 {% block content %}
   {% if site_logo %}
     <div class="brand logo">
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+      <a href="{{ home }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
         <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
       </a>
     </div>
