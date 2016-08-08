@@ -33,6 +33,42 @@ regions:
   footer_menu: 'Footer Menu'
   google_map: 'Google Map'
   auto_hidden_block: 'Auto hidden blocks'
+
+stylesheets-remove:
+#  - core/themes/stable/css/system/components/ajax-progress.module.css
+  - core/themes/stable/css/system/components/align.module.css
+  - core/themes/stable/css/system/components/autocomplete-loading.module.css
+  - core/themes/stable/css/system/components/fieldgroup.module.css
+  - core/themes/stable/css/system/components/container-inline.module.css
+  - core/themes/stable/css/system/components/clearfix.module.css
+  - core/themes/stable/css/system/components/details.module.css
+#  - core/themes/stable/css/system/components/hidden.module.css
+  - core/themes/stable/css/system/components/js.module.css
+  - core/themes/stable/css/system/components/nowrap.module.css
+  - core/themes/stable/css/system/components/position-container.module.css
+  - core/themes/stable/css/system/components/progress.module.css
+  - core/themes/stable/css/system/components/reset-appearance.module.css
+  - core/themes/stable/css/system/components/resize.module.css
+  - core/themes/stable/css/system/components/sticky-header.module.css
+  - core/themes/stable/css/system/components/tabledrag.module.css
+  - core/themes/stable/css/system/components/tablesort.module.css
+  - core/themes/stable/css/system/components/tree-child.module.css
+  - core/themes/stable/css/system/components/item-list.module.css
+  - core/themes/stable/css/system/components/tablesort.module.css
+  - core/themes/stable/css/system/components/action-links.theme.css
+  - core/themes/stable/css/system/components/breadcrumb.theme.css
+  - core/themes/stable/css/system/components/button.theme.css
+  - core/themes/stable/css/system/components/collapse-processed.theme.css
+  - core/themes/stable/css/system/components/container-inline.theme.css
+  - core/themes/stable/css/system/components/details.theme.css
+  - core/themes/stable/css/system/components/exposed-filters.theme.css
+  - core/themes/stable/css/system/components/field.theme.css
+  - core/themes/stable/css/system/components/form.theme.css
+  - core/modules/file/css/file.theme.css
+  - core/modules/file/css/file.admin.css
+  - core/modules/image/css/image.theme.css
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/classy/css/components/node.css
 # Information added by Drupal.org packaging script on 2016-01-08
 version: '8.x-1.0'
 core: '8.x'
